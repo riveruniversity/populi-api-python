@@ -7,3 +7,4 @@ pycodestyle==2.6.0
 pycurl==7.43.0.6
 soupsieve==2.0.1
 toml==0.10.1
+certifi
