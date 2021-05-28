@@ -6,6 +6,8 @@ import time
 from urllib.parse import urlencode
 from os import environ, path
 
+import certifi
+
 from . import exceptions
 
 logger = logging.getLogger(__name__)
@@ -21,6 +23,7 @@ def request(endpoint, parameters, curl_options=[]):
     b = BytesIO()
 
     c.setopt(pycurl.URL, endpoint)
+    c.setopt(pycurl.CAINFO, certifi.where())
     c.setopt(pycurl.POST, 1)
     c.setopt(pycurl.POSTFIELDS, urlencode(parameters, True))
     c.setopt(pycurl.WRITEDATA, b)
