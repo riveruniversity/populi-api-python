@@ -24,3 +24,6 @@ results = populi.get_transactions(start_date='2012-10-01', end_date='2012,10-02'
 
 ### 0.0.7
 + Enabled passing curl options via initialize(). The added option list is in the format of tuples: (pycurl.OPTION, value).
+
+### 0.0.9
++ Added method get_leads() which has been added to the Populi API Reference List on April 9, 2021.
