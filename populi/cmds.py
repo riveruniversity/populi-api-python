@@ -1530,6 +1530,17 @@ def delete_license_plate(person_id: str = None):
     return get_anonymous('deleteLicensePlate', person_id=person_id)
 
 
+def delete_person(person_id: str = None):
+    """
+    Deletes a person.
+
+    :param person_id: The numeric ID of the person you want to delete.
+    :returns: String containing xml or an lxml element.
+    """
+
+    return get_anonymous('deletePerson', person_id=person_id)
+
+
 def delete_person_birth_date(person_id: str = None):
     """
     Deletes the birth date for a particular person.
