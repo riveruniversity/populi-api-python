@@ -24,7 +24,7 @@ results = populi.get_transactions(start_date='2012-10-01', end_date='2012,10-02'
 
 ### 0.0.8
 + Forked from https://github.com/mikrjohn/populi-api-python
-+ 
+
 ### 0.0.7
 + Enabled passing curl options via initialize(). The added option list is in the format of tuples: (pycurl.OPTION, value).
 
