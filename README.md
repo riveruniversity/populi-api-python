@@ -18,15 +18,16 @@ results = populi.get_transactions(start_date='2012-10-01', end_date='2012,10-02'
 ```
 ## Versions
 
-### 0.0.6
-+ Updated Command list as of commands shown on populi on May 25th, 2020
-+ Fixed downloadFile and downloadBackup to return bytes.
-
-### 0.0.7
-+ Enabled passing curl options via initialize(). The added option list is in the format of tuples: (pycurl.OPTION, value).
-
-### 0.0.8
-
 ### 0.0.9
 + Added method get_leads() which has been added to the Populi API Reference List on April 9, 2021.
 + Added method delete_person().
+
+### 0.0.8
++ Forked from https://github.com/mikrjohn/populi-api-python
++ 
+### 0.0.7
++ Enabled passing curl options via initialize(). The added option list is in the format of tuples: (pycurl.OPTION, value).
+
+### 0.0.6
++ Updated Command list as of commands shown on populi on May 25th, 2020
++ Fixed downloadFile and downloadBackup to return bytes.
