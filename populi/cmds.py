@@ -3902,8 +3902,8 @@ def set_custom_field_options(
         person_id: str = None,
         owner_id: str = None,
         term_id: str = None,
-        values_array: array = None,
-        option_index_array: array = None):
+        values_array: list = None,
+        option_index_array: list = None):
     """
     Sets a custom field value for a particular person, organization, or donation.
 
