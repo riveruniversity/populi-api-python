@@ -3897,6 +3897,44 @@ def set_custom_field(
         option_index=option_index)
 
 
+def set_custom_field_options(
+        custom_field_id: str,
+        person_id: str = None,
+        owner_id: str = None,
+        term_id: str = None,
+        values_array: array = None,
+        option_index_array: array = None):
+    """
+    Sets a custom field value for a particular person, organization, or donation.
+
+    :param custom_field_id: The numeric ID of the custom field you're interested in.
+    :param person_id: The numeric ID of the person you're interested in.
+    :param owner_id: The numeric ID of object you're interested in, if they are not a person.
+    :param term_id: The numeric ID of the term you're interested in.
+    :param value: The value for this field.
+    :param option_index: For RADIOs and SELECTs, you can pass in the index of the selected option.
+    :returns: String containing xml or an lxml element.
+    """
+    
+    params = {
+        'custom_field_id':custom_field_id,
+        'person_id':person_id,
+        'owner_id':owner_id,
+        'term_id':term_id,
+        'value':values_array
+    }
+    
+    if values_array != None:
+        for i in range(len(values_array)):
+            params['value [%s]' % (i)] = values_array[i]
+    
+    if option_index_array != None:
+        for i in range(len(option_index_array)):
+            params['option_index[%s]' % (i)] = option_index_array[i]
+    
+    return get_anonymous('setCustomField', **params)
+
+
 def set_lead_info(
         person_id: str = None,
         status: str = None,
