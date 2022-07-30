@@ -11,7 +11,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="populi-mrobison",
-    version="0.0.9",
+    version="0.0.10",
     author="Mike Robison",
     author_email="mrobison@wts.edu",
     description="A module for interacting with the populi api.",
