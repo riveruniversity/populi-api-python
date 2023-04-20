@@ -18,6 +18,9 @@ results = populi.get_transactions(start_date='2012-10-01', end_date='2012,10-02'
 ```
 ## Versions
 
+### 0.0.11
++ Added method add_activity_feed_note() that was added in August, 2021. [Release Notes](https://support.populiweb.com/hc/en-us/articles/4405139393051-August-9-to-August-13-2021-Release-Notes)
+
 ### 0.0.10
 + Added method set_custom_field_options() to check multiple options via value or option_index parameter.
 
