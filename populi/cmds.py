@@ -1,6 +1,23 @@
 from .driver import initialize, get_anonymous, get_all_anonymous
 
 
+def add_activity_feed_note(
+        person_id: str = None,
+        note: str = None):
+    """
+    Adds a note to a person's activity feed.
+
+    :param person_id: The numeric ID of the person's profile.
+    :param note: The text content of the note.
+    :returns: String containing xml or an lxml element.
+    """
+
+    return get_anonymous(
+        'addActivityFeedNote',
+        person_id=person_id,
+        note=note)
+        
+
 def add_address(
         person_id: str = None,
         organization_id: str = None,
